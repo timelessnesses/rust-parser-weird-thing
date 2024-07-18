@@ -1,6 +1,12 @@
-use lol::{built_for_this, returns_slice, SliceStruct};
+pub fn returns_slice() -> [(); 1] {
+    [()]
+}
 
-mod lol;
+pub struct SliceStruct(pub [(); 1]);
+
+pub fn built_for_this() -> SliceStruct {
+    SliceStruct([()])
+}
 
 fn main() {
     // returns_slice()[1];
