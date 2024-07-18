@@ -9,7 +9,10 @@ pub fn built_for_this() -> SliceStruct {
 }
 
 fn main() {
-    // returns_slice()[1];
+    // compiler error
+    returns_slice()[1];
+    // panics
     built_for_this().0[1];
-    // SliceStruct([()]).0[1];
+    // compiler error
+    SliceStruct([()]).0[1];
 }
